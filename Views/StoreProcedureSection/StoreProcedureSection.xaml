@@ -1,0 +1,25 @@
+﻿<Window x:Class="ToolDB.StoreProcedureSection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToolDB"
+        mc:Ignorable="d"
+        Title="StoreProcedureSection" Height="592" Width="1022" Background="Transparent" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" >
+    <Border Background="White" BorderBrush="CornflowerBlue"  BorderThickness="2" CornerRadius="10">
+        <Grid>
+            <Button Name="btnClose" Content="X" Foreground="White" FontFamily="Resources/OpenSans-Bold.ttf #Open Sans" Background="Red" FontSize="13" Padding="0, 0, 0, 0" HorizontalAlignment="Left" Margin="977,5,0,0" VerticalAlignment="Top" Width="32" Height="27" Click="BtnClose_Click" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="3" />
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <WrapPanel Name="wrapper" Margin="10,113,10,25"/>
+            <Ellipse Fill="White" HorizontalAlignment="Left" Height="53" Margin="10,10,0,0" Stroke="CornflowerBlue" StrokeThickness="2" VerticalAlignment="Top" Width="60"/>
+            <Image HorizontalAlignment="Left" Source="../../Resources/icons8-flujo-de-trabajo-64.png" Height="36" Margin="22,18,0,0" VerticalAlignment="Top" Width="35"/>
+            <Label Content="Store Procedures" Foreground="CornflowerBlue" FontSize="20" HorizontalAlignment="Left" Margin="73,18,0,0" VerticalAlignment="Top"/>
+            <Label Name="lblNoProcedures" Content="There is no Store Procedures" FontSize="50" Foreground="LightGray" Visibility="Hidden" HorizontalAlignment="Center" Margin="41,288,0,0" VerticalAlignment="Top"/>
+        </Grid>
+    </Border>
+</Window>

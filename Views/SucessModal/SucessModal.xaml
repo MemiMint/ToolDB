@@ -1,0 +1,24 @@
+﻿<Window x:Class="ToolDB.SucessModal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToolDB"
+        mc:Ignorable="d"
+        Title="WarningModal" Height="358" Width="430" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
+
+    <Border BorderBrush="LightGreen" BorderThickness="3" Background="White" CornerRadius="10" >
+        <Grid>
+            <Image HorizontalAlignment="Center" Source="../../Resources/icons8-de-acuerdo-100.png" Height="100" Margin="164,16,160,0" VerticalAlignment="Top" Width="100"/>
+            <TextBlock HorizontalAlignment="Left" TextAlignment="Center" FontSize="30" Foreground="LightGreen" FontFamily="Resources/OpenSans-Regular.ttf #Open Sans" Margin="1,133,0,0" TextWrapping="Wrap" Text="Script Made Sucessfully" VerticalAlignment="Top" Width="421"/>
+            <Button Name="btnOK" Content="Open Folder" Background="LightGreen" Foreground="White" FontSize="20" FontFamily="Resources/OpenSans-Regular.ttf #Open Sans" HorizontalAlignment="Left" Margin="71,275,0,0" VerticalAlignment="Top" Width="283" Height="48" Click="BtnOK_Click" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10" />
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+        </Grid>
+    </Border>
+</Window>

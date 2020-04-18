@@ -1,0 +1,65 @@
+﻿<Window x:Class="ToolDB.CommentName"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToolDB"
+        mc:Ignorable="d"
+        Title="CommentName" Height="86" Width="443" AllowsTransparency="True" WindowStyle="None" Background="Transparent" WindowStartupLocation="CenterScreen" >
+    <Window.Resources>
+        <SolidColorBrush x:Key="CornFlower">#6593f6</SolidColorBrush>
+    </Window.Resources>
+    <Border CornerRadius="5" Background="White" BorderThickness="2" BorderBrush="CornflowerBlue" >
+        <Grid Margin="0,0,1,-4">
+            <TextBox x:Name="txtEditComment" HorizontalAlignment="Center" Foreground="LightSeaGreen" FontSize="25" Height="56" Padding="10" Margin="9,16,147,14" TextWrapping="Wrap" VerticalAlignment="Center" Width="282" >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="20" />
+                    </Style>
+                    <Style xmlns:sys="clr-namespace:System;assembly=mscorlib" TargetType="{x:Type TextBox}" >
+                        <Style.Resources>
+                            <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None" >
+                                <VisualBrush.Visual>
+                                    <Label Padding="10" FontSize="20" FontFamily="Resources/OpenSans-Regular.ttf #Open Sans" Content="//Add a Comment" Foreground="LightGray" />
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Style.Resources>
+                        <Style.Triggers>
+                            <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                <Setter Property="BorderThickness" Value="1" />
+                                <Setter Property="BorderBrush" Value="LightGray" />
+                            </Trigger>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter Property="Background" Value="LightSeaGreen" />
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True" >
+                                <Setter Property="Background" Value="White"/>
+                                <Setter Property="BorderThickness" Value="2" />
+                                <Setter Property="BorderBrush" Value="LightSeaGreen" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <Button Name="btnEditComment" Background="Transparent" BorderBrush="CornflowerBlue" BorderThickness="2" HorizontalAlignment="Left" Margin="299,27,0,0" VerticalAlignment="Top" Width="41" Height="37" Click="BtnEditComment_Click" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5" />
+                    </Style>
+                </Button.Resources>
+                <Image Source="..\..\Resources/icons8-lápiz-60.png" />
+            </Button>
+            <Button Name="btnClose" Background="Transparent" BorderBrush="Red" BorderThickness="2" HorizontalAlignment="Left" Margin="359,27,0,0" VerticalAlignment="Top" Width="41" Height="37" Click="BtnClose_Click" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5" />
+                    </Style>
+                </Button.Resources>
+                <Label FontSize="20" Foreground="Red" Padding="0, 0, 0, 3">
+                    X
+                </Label>
+            </Button>
+        </Grid>
+    </Border>
+</Window>
