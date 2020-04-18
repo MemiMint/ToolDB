@@ -1,0 +1,11 @@
+﻿<Application x:Class="ToolDB.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ToolDB"
+             StartupUri="Views/Main/MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Resources/OpenSans-Regular.ttf #Open Sans"/>
+        </Style>
+    </Application.Resources>
+</Application>
